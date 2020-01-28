@@ -18,15 +18,6 @@ namespace DND_Demo.Models
         public virtual DbSet<Dndclasses> Dndclasses { get; set; }
         public virtual DbSet<Dndmembers> Dndmembers { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=wd16vmdbcls31; database=DND_Demo; Integrated Security=true");
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Dndclasses>(entity =>
