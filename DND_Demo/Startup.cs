@@ -53,7 +53,7 @@ namespace DND_Demo
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Dndmembers}/{action=Index}/{id?}");
             });
         }
     }
